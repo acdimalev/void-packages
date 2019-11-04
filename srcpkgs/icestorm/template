@@ -15,3 +15,10 @@ license=ISC
 homepage=http://www.clifford.at/icestorm/
 distfiles="https://github.com/cliffordwolf/icestorm/tarball/$commit>icestorm.tgz"
 checksum=f92b3bc5b1af29201af1eb6f82c2621ada47fb6e73ebfb28ae00b687aeada1b4
+
+post_install() {
+	for i in docs/* ; do
+		vdoc $i
+	done
+	vlicense COPYING
+}
