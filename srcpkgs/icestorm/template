@@ -7,6 +7,7 @@ wrksrc="cliffordwolf-icestorm-$commit"
 hostmakedepends="python3 pkg-config"
 makedepends="libftdi1-devel libusb-devel"
 build_style=gnu-makefile
+make_build_args="PREFIX=/usr"
 make_use_env=yes
 short_desc="Lattice iCE40 FPGAs Bitstream Documentaion (Reverse Engineered)"
 maintainer="jamin <acdimalev@gmail.com>"
