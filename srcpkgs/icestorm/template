@@ -2,7 +2,7 @@
 pkgname=icestorm
 version=20191030
 revision=1
-_commit=0ec00d8
+_commit=0ec00d892a91cc68e45479b46161f649caea2933
 build_style=gnu-makefile
 make_build_args="PREFIX=/usr"
 make_use_env=yes
@@ -12,9 +12,9 @@ short_desc="Lattice iCE40 FPGAs Bitstream Documentaion (Reverse Engineered)"
 maintainer="jamin <acdimalev@gmail.com>"
 license=ISC
 homepage=http://www.clifford.at/icestorm/
-wrksrc="cliffordwolf-$pkgname-$_commit"
-distfiles="https://github.com/cliffordwolf/$pkgname/tarball/$_commit>icestorm.tgz"
-checksum=f92b3bc5b1af29201af1eb6f82c2621ada47fb6e73ebfb28ae00b687aeada1b4
+wrksrc="$pkgname-$_commit"
+distfiles="https://github.com/cliffordwolf/$pkgname/archive/$_commit.tar.gz"
+checksum=18308d422245a583279c3b4da75b0130434149e75750ead4e65b7dafc8437dc9
 
 post_install() {
 	for i in docs/* ; do
