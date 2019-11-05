@@ -1,19 +1,19 @@
 # Template for 'icestorm'
 pkgname=icestorm
-commit=0ec00d8
 version=20191030
 revision=1
-wrksrc="cliffordwolf-icestorm-$commit"
-hostmakedepends="python3 pkg-config"
-makedepends="libftdi1-devel libusb-devel"
+_commit=0ec00d8
 build_style=gnu-makefile
 make_build_args="PREFIX=/usr"
 make_use_env=yes
+hostmakedepends="python3 pkg-config"
+makedepends="libftdi1-devel libusb-devel"
 short_desc="Lattice iCE40 FPGAs Bitstream Documentaion (Reverse Engineered)"
 maintainer="jamin <acdimalev@gmail.com>"
 license=ISC
 homepage=http://www.clifford.at/icestorm/
-distfiles="https://github.com/cliffordwolf/icestorm/tarball/$commit>icestorm.tgz"
+wrksrc="cliffordwolf-$pkgname-$_commit"
+distfiles="https://github.com/cliffordwolf/$pkgname/tarball/$_commit>icestorm.tgz"
 checksum=f92b3bc5b1af29201af1eb6f82c2621ada47fb6e73ebfb28ae00b687aeada1b4
 
 post_install() {
