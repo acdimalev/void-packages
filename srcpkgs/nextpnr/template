@@ -2,7 +2,7 @@
 pkgname=nextpnr
 version=20191031
 revision=1
-_commit=5cf0ed5
+_commit=5cf0ed5edead8aa4060978f7b22e598ab03ef1b9
 build_style=cmake
 hostmakedepends="python3"
 makedepends="python3-devel boost-devel qt5-devel eigen icestorm"
@@ -10,8 +10,8 @@ short_desc="portable FPGA place and route tool"
 maintainer="jamin <acdimalev@gmail.com>"
 license=ISC
 homepage=https://github.com/YosysHQ/nextpnr
-wrksrc="YosysHQ-$pkgname-$_commit"
-distfiles="https://github.com/YosysHQ/$pkgname/tarball/$_commit>$pkgname.tgz"
-checksum=b0ee521c0c21caf17597e5f86dcb0ad5b844a8523b9e0115abd1b5b47b04e4b2
+wrksrc="$pkgname-$_commit"
+distfiles="https://github.com/YosysHQ/$pkgname/archive/$_commit.tar.gz"
+checksum=04541f625e5f75406f78792d06c48b007fd8c2136b2018487c8982832873df9d
 # FIXME: ARCH=all
 configure_args="-DARCH=ice40 -DICEBOX_ROOT=/usr/share/icebox"
