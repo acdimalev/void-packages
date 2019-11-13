@@ -1,17 +1,17 @@
 # Template for 'nextpnr'
 pkgname=nextpnr
-commit=5cf0ed5
 version=20191031
 revision=1
-wrksrc="YosysHQ-nextpnr-$commit"
+_commit=5cf0ed5
+build_style=cmake
 hostmakedepends="python3"
 makedepends="python3-devel boost-devel qt5-devel eigen icestorm"
-build_style=cmake
 short_desc="portable FPGA place and route tool"
 maintainer="jamin <acdimalev@gmail.com>"
 license=ISC
 homepage=https://github.com/YosysHQ/nextpnr
-distfiles="https://github.com/YosysHQ/nextpnr/tarball/$commit>nextpnr.tgz"
+wrksrc="YosysHQ-$pkgname-$_commit"
+distfiles="https://github.com/YosysHQ/$pkgname/tarball/$_commit>$pkgname.tgz"
 checksum=b0ee521c0c21caf17597e5f86dcb0ad5b844a8523b9e0115abd1b5b47b04e4b2
 # FIXME: ARCH=all
 configure_args="-DARCH=ice40 -DICEBOX_ROOT=/usr/share/icebox"
